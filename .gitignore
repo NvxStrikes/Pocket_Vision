@@ -1,0 +1,30 @@
+﻿# Gradle build outputs & caches
+.gradle/
+build/
+**/build/
+*.apk
+*.aab
+
+# Local device & SDK configurations
+local.properties
+**/local.properties
+
+# IDE & Editor caches
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Python & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+**/.env
+
+# Local test scratch & logs
+testing/
+*.log
