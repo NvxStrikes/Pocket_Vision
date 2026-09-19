@@ -1,175 +1,112 @@
 <div align="center">
 
-# 👁️ POCKET VISION 📱
-### *Next-Gen Real-Time Mobile Computer Vision & Multimodal Perception*
+<img src="docs/hero-banner.svg" alt="Pocket Vision Terminal" width="100%" />
 
-[![Android](https://img.shields.io/badge/Platform-Android%207.0%2B%20(API%2024%2B)-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com)
-[![Kotlin](https://img.shields.io/badge/Language-Kotlin%201.9-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org)
-[![Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
-[![MediaPipe](https://img.shields.io/badge/On--Device%20ML-MediaPipe%20Tasks-00E5FF?style=for-the-badge&logo=google&logoColor=white)](https://developers.google.com/mediapipe)
-[![FastAPI](https://img.shields.io/badge/Backend-FastAPI%20%2F%20Python%203.11-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue?style=for-the-badge)](LICENSE)
+<br/><br/>
+
+<table>
+  <tr>
+    <td bgcolor="#121820" align="center"><b><font color="#94A3B8">&nbsp;SYSTEM&nbsp;</font></b></td>
+    <td bgcolor="#F5D90A" align="center"><b><font color="#0C1017">&nbsp;OPERATIONAL&nbsp;</font></b></td>
+    <td>&nbsp;</td>
+    <td bgcolor="#121820" align="center"><b><font color="#94A3B8">&nbsp;NETWORK STREAM&nbsp;</font></b></td>
+    <td bgcolor="#F5D90A" align="center"><b><font color="#0C1017">&nbsp;0 BYTES&nbsp;</font></b></td>
+    <td>&nbsp;</td>
+    <td bgcolor="#121820" align="center"><b><font color="#94A3B8">&nbsp;INFERENCE&nbsp;</font></b></td>
+    <td bgcolor="#00E5FF" align="center"><b><font color="#0C1017">&nbsp;ON-DEVICE&nbsp;</font></b></td>
+    <td>&nbsp;</td>
+    <td bgcolor="#121820" align="center"><b><font color="#94A3B8">&nbsp;GESTURES&nbsp;</font></b></td>
+    <td bgcolor="#F5D90A" align="center"><b><font color="#0C1017">&nbsp;9 CANONICAL&nbsp;</font></b></td>
+  </tr>
+</table>
+
+<br/>
 
 <p align="center">
-  <b>Point. Detect. Understand.</b><br>
-  A cybernetic, lightweight mobile computer-vision camera app capable of seeing the real world,<br>
-  intelligently recognizing objects, people, hand gestures, and visible facial expressions in real time—all on-device.<br>
-  Powered by an on-demand cloud <b>✨ Smart Scan</b> for deep species, breed, and scene identification.
+  <b>Free, high-performance, client-side computer vision &amp; multimodal reasoning.</b><br/>
+  <i>Everything executes directly inside local device memory &mdash; no video feeds or telemetry are ever uploaded.</i>
 </p>
 
----
-
-```
-╭────────────────────────────────────────────────────────╮
-│  POCKET VISION                                  ● LIVE │
-│                                                        │
-│             ┌─────────────────────────┐                │
-│             │         PERSON          │                │
-│             │          98%            │                │
-│             └─────────────────────────┘                │
-│                                                        │
-│              😊 Expression: Smiling                    │
-│                                                        │
-│                    ✌️ PEACE (95%)                      │
-│                                                        │
-│       ┌───────────────────────┐                        │
-│       │     WATER BOTTLE      │                        │
-│       │         94%           │                        │
-│       └───────────────────────┘                        │
-│                                                        │
-│                 [ ✨ SMART SCAN ]                       │
-╰────────────────────────────────────────────────────────╯
-```
+<p align="center">
+  <a href="#-key-highlights"><b>Explore Features</b></a> &bull;
+  <a href="#-architecture--dataflow"><b>Architecture</b></a> &bull;
+  <a href="#-gesture-matrix"><b>Gesture Matrix</b></a> &bull;
+  <a href="#-smart-scan-deep-reasoning"><b>Smart Scan</b></a> &bull;
+  <a href="#-getting-started--installation"><b>Install APK</b></a>
+</p>
 
 </div>
 
 ---
 
-## 🚀 Key Highlights
+## ⚡ Key Highlights
 
-<table>
-  <tr>
-    <td width="50%">
-      <h3>⚡ Real-Time On-Device Perception</h3>
-      <ul>
-        <li><b>80+ Object Categories</b>: Detects bottles, laptops, cups, chairs, vehicles, animals, and backpacks instantly.</li>
-        <li><b>Temporal Stabilization</b>: Exponential Moving Average (EMA) coordinate smoothing stops box jittering and flickering.</li>
-        <li><b>30–60 FPS Preview</b>: Camera preview never drops frames; decoupled asynchronous inference runs at 10–15 FPS.</li>
-      </ul>
-    </td>
-    <td width="50%">
-      <h3>🖐️ Hand & Gesture Intelligence</h3>
-      <ul>
-        <li><b>21 3D Landmarks</b>: Real-time hand skeletal tracking.</li>
-        <li><b>9 Common Gestures</b>: Peace ✌️, Thumbs Up 👍, Thumbs Down 👎, Open Palm ✋, Closed Fist ✊, Pointing ☝️, I Love You 🤟, OK Sign 👌, Rock/Horns 🤘.</li>
-        <li><b>Hybrid Geometry</b>: Combines built-in models with landmark vector angles for custom gestures.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <h3>🎭 Visible Facial Expressions</h3>
-      <ul>
-        <li><b>52 ARKit Blendshapes</b>: Evaluates muscle action units in real time.</li>
-        <li><b>Physical Expressions</b>: Smiling 😊, Surprised 😮, Frowning 🙁, and Neutral 😐.</li>
-        <li><b>Ethical Boundaries</b>: Strictly describes physical visible expressions without speculating on psychological states.</li>
-      </ul>
-    </td>
-    <td width="50%">
-      <h3>✨ Smart Scan (Deep Reasoning)</h3>
-      <ul>
-        <li><b>Multimodal Reasoning</b>: Tap <i>✨ SMART SCAN</i> to capture high-res frame and invoke deep vision analysis.</li>
-        <li><b>Fine-Grained Classification</b>: Pinpoints specific breeds, species, and brands (e.g. <i>"Likely Golden Retriever"</i>).</li>
-        <li><b>Offline Resilience</b>: Seamlessly falls back to on-device heuristic deep reasoning when offline.</li>
-      </ul>
-    </td>
-  </tr>
-</table>
+* 🔒 **100% On-Device Processing**: Images and video feeds never cross the wire. Hand landmarks, facial blendshapes, and 80+ object classes run strictly on local CPU/GPU using Google MediaPipe Tasks Vision.
+* ⚡ **Zero Round-Trip Latency**: Instantaneous execution leveraging native hardware acceleration (30–60 FPS camera preview) without cloud network queue bottlenecks.
+* 📐 **Neo-Brutalist HUD Engineering**: Sharp cyberpunk reticles, rounded neon-cyan bounding boxes, 1–2px structural borders, and hard offset text shadows.
+* 🎯 **Temporal EMA Anti-Jitter**: Bounding box coordinates and category labels are stabilized via Exponential Moving Average (EMA) and 5-frame hysteresis, eliminating label flicker.
+* 🎭 **Ethical Facial Expression Tracking**: Certified physical visible expression mapping (Smiling 😊, Surprised 😮, Frowning 🙁, Neutral 😐) with strict `no-psychological-diagnosis` boundaries.
+* 🧠 **On-Demand Multimodal Reasoning**: Cloud reasoning with Gemini 2.5 Flash only triggers when the user intentionally taps **✨ SMART SCAN**, with automatic offline heuristic fallback.
+
+---
+
+## 🏗️ Architecture & Dataflow
+
+Traditional computer-vision apps stream entire continuous camera feeds across public networks to remote GPU clusters, incurring severe bandwidth, privacy, and latency liabilities. **Pocket Vision** eliminates the transit liability entirely through local edge execution:
+
+<div align="center">
+  <img src="docs/architecture-flow.svg" alt="Pocket Vision Architecture Specification" width="100%" />
+</div>
+
+<br/>
+
+### Dataflow Stages:
+1. **01 // Ingestion**: AndroidX CameraX feeds raw RGBA frames into an asynchronous buffer using `STRATEGY_KEEP_ONLY_LATEST`, preventing any preview stutter.
+2. **02 // On-Device Vision**: MediaPipe Tasks Vision executes object detection (`efficientdet_lite0`), 21-point hand tracking (`gesture_recognizer`), and 52 facial blendshapes (`face_landmarker`).
+3. **03 // Stabilization**: Coordinate smoother filters jitter; HUD overlay paints smooth bounding boxes and gesture banners.
+4. **04 // Smart Scan**: When requested, a single compressed frame is dispatched to the FastAPI gateway for fine-grained breed, species, or object reasoning.
 
 ---
 
 ## 🎮 Gesture Matrix
 
-Pocket Vision tracks 21 skeletal hand coordinates and applies vector geometry rules alongside neural classification:
+Pocket Vision tracks 21 skeletal hand coordinates and evaluates finger curl vectors alongside machine learning classifiers:
 
 | Gesture | Icon | Trigger Geometry & Landmark Heuristics | Confidence Target |
 | :--- | :---: | :--- | :---: |
-| **Peace / Victory** | ✌️ | Index & Middle extended in V-formation, Ring & Pinky locked by Thumb | > 90% |
+| **Peace / Victory** | ✌️ | Index & Middle extended in V-formation, Ring & Pinky curled | > 90% |
 | **Thumbs Up** | 👍 | Thumb pointing upwards, 4 fingers curled tightly into palm | > 90% |
-| **Thumbs Down** | 👎 | Thumb inverted downwards, 4 fingers curled | > 90% |
+| **Thumbs Down** | 👎 | Thumb inverted downwards, 4 fingers curled into palm | > 90% |
 | **Open Palm** | ✋ | All 5 digits fully extended and separated | > 92% |
 | **Closed Fist** | ✊ | All digits folded inward across metacarpals | > 92% |
 | **Pointing Up** | ☝️ | Index digit extended vertical, remaining digits curled | > 90% |
-| **I Love You** | 🤟 | Thumb, Index, and Pinky extended, Middle and Ring folded | > 88% |
-| **OK Sign** | 👌 | Thumb tip & Index tip Euclidean distance < 0.065, Middle/Ring/Pinky extended | > 90% |
-| **Rock / Horns** | 🤘 | Index & Pinky extended vertical, Middle & Ring tips folded inward | > 92% |
+| **I Love You** | 🤟 | Thumb, Index, and Pinky extended, Middle & Ring folded | > 88% |
+| **OK Sign** | 👌 | Thumb tip & Index tip Euclidean distance < 0.065, other 3 digits extended | > 90% |
+| **Rock / Horns** | 🤘 | Index & Pinky extended vertical, Middle & Ring tips curled into palm | > 92% |
 
 ---
 
-## 🏛️ System Architecture
+## ✨ Smart Scan (Deep Reasoning)
 
-```mermaid
-flowchart TD
-    subgraph MobileDevice["📱 Android Mobile App (Pocket Vision)"]
-        Cam[CameraX PreviewView
-30-60 FPS] --> Buffer[RGBA ImageProxy Buffer
-STRATEGY_KEEP_ONLY_LATEST]
-        Buffer --> Coordinator[VisionCoordinator
-Asynchronous Queue]
+When pointing at unusual animals, specific breeds, or complex environments, tap **✨ SMART SCAN**:
 
-        subgraph LocalML["On-Device MediaPipe Tasks Vision"]
-            Coordinator --> ObjDet["Object Detector
-(efficientdet_lite0.tflite)"]
-            Coordinator --> GestRec["Gesture Recognizer
-(21 3D Landmarks + 9 Gestures)"]
-            Coordinator --> FaceLand["Face Landmarker
-(52 Blendshapes Expressions)"]
-        end
-
-        ObjDet --> Smoother[Temporal EMA Smoother & Label Hysteresis]
-        GestRec --> HUD[Futuristic Compose HUD Overlay]
-        FaceLand --> HUD
-        Smoother --> HUD
-
-        HUD --> Shutter[✨ SMART SCAN Button]
-        Shutter --> Cap[ImageCapture / High-Res Frame]
-    end
-
-    subgraph BackendCloud["☁️ Smart Scan Service (FastAPI)"]
-        Cap -->|HTTP POST /api/v1/analyze| Router[FastAPI Gateway]
-        Router --> Gemini[Google Gemini 2.5 Flash
-Multimodal Vision Engine]
-        Router -.->|Fallback if Offline| LocalFallback[On-Device Heuristic Engine]
-        Gemini --> Schema[Structured JSON Response]
-        LocalFallback --> Schema
-    end
-
-    Schema -->|Card Result| Modal[Animated Smart Scan Result Card]
 ```
-
----
-
-## 📱 Mobile Application Tech Stack
-
-* **Language**: Kotlin 1.9.24
-* **UI Toolkit**: Jetpack Compose (Material 3) + Edge-to-Edge System Bars
-* **Camera Framework**: AndroidX CameraX (`1.3.4`)
-* **On-Device Vision Models**:
-  * `efficientdet_lite0.tflite` (COCO 80 categories)
-  * `gesture_recognizer.task` (21 hand landmarks + gesture embeddings)
-  * `face_landmarker.task` (478 3D landmarks + 52 ARKit blendshapes)
-* **Networking**: OkHttp3 + Gson
-* **Audio**: Android Text-To-Speech (TTS) with rate-limiting & cooldown
-
----
-
-## ☁️ Backend Service Tech Stack
-
-* **Framework**: FastAPI + Uvicorn (ASGI)
-* **Language**: Python 3.11+
-* **Validation**: Pydantic v2
-* **Image Processing**: Pillow (PIL)
-* **AI Provider**: Google GenAI SDK (Gemini 2.5 Flash) with fallback mock heuristics
+╭────────────────────────────────────────────────────────╮
+│ ✨ SMART SCAN RESULT                                   │
+│                                                        │
+│ DOG                                                    │
+│ Likely: Golden Retriever                               │
+│ 94% Confidence                                         │
+│                                                        │
+│ Visual Description:                                    │
+│ A golden-colored retriever standing outdoors on lawn   │
+│ near a tree with a visible collar.                     │
+│                                                        │
+│ [grass] [tree] [collar] [outdoor]                      │
+│                                                        │
+│                      [ DISMISS ]                       │
+╰────────────────────────────────────────────────────────╯
+```
 
 ---
 
@@ -215,23 +152,23 @@ The APK will launch directly with complete offline perception models bundled!
    ```bash
    cp .env.example .env
    ```
-   *(Optional: Add your `GEMINI_API_KEY` to `.env` for real-time cloud analysis).*
+   *(Optional: Add your `GEMINI_API_KEY` to `.env` for cloud multimodal vision).*
 
 5. **Start the FastAPI server**:
    ```bash
    uvicorn main:app --reload --host 0.0.0.0 --port 8000
    ```
-   * Access interactive Swagger docs at `http://localhost:8000/docs`
-   * Check health at `http://localhost:8000/health`
+   * Interactive API docs: `http://localhost:8000/docs`
+   * Health endpoint: `http://localhost:8000/health`
 
 ---
 
-## 🔒 Privacy, Security & Ethics
+## 🔒 Privacy & Security Standards
 
 * **Zero Passive Streaming**: Pocket Vision **never** streams video feeds to the cloud. Live perception (objects, gestures, faces) is computed 100% locally on the phone CPU/GPU.
-* **On-Demand Smart Scan**: High-resolution frames are only transmitted when the user explicitly taps `✨ SMART SCAN`.
-* **Credential Isolation**: No secret API keys or credentials are baked into the mobile APK. All AI service calls are proxied through the backend.
-* **Ethical Vision Boundaries**: Pocket Vision classifies observable physical facial expressions (Smiling, Surprised, Neutral, Frowning). It never attempts speculative psychological profiling or biometric identity verification.
+* **On-Demand Dispatch**: High-resolution frames are only transmitted when the user explicitly taps `✨ SMART SCAN`.
+* **Credential Isolation**: No secret API keys or credentials exist in the mobile APK.
+* **Ethical Vision Boundaries**: Evaluates physical visible expressions (Smiling, Surprised, Neutral, Frowning). It never attempts speculative psychological profiling or identity tracking.
 
 ---
 
@@ -239,10 +176,13 @@ The APK will launch directly with complete offline perception models bundled!
 
 ```text
 Pocket_Vision/
+├── docs/                             # Animated SVG diagrams & architecture
+│   ├── hero-banner.svg               # Animated Cyberpunk HUD banner
+│   ├── architecture-flow.svg         # Animated Dataflow architecture
+│   └── architecture.md
 ├── mobile/                           # Native Android application
 │   ├── app/
 │   │   ├── src/main/
-│   │   │   ├── AndroidManifest.xml
 │   │   │   ├── assets/               # Bundled MediaPipe models (.tflite, .task)
 │   │   │   │   ├── efficientdet_lite0.tflite
 │   │   │   │   ├── gesture_recognizer.task
@@ -269,8 +209,6 @@ Pocket_Vision/
 ├── scripts/                          # Model download & verification scripts
 │   ├── download_models.py
 │   └── verify_environment.py
-├── docs/
-│   └── architecture.md
 ├── .gitignore
 └── README.md
 ```
@@ -278,5 +216,5 @@ Pocket_Vision/
 ---
 
 <div align="center">
-  <sub>Engineered with precision for mobile vision exploration. Built by <a href="https://github.com/NvxStrikes">NvxStrikes</a>.</sub>
+  <sub>Engineered with precision for mobile computer vision. Built by <a href="https://github.com/NvxStrikes">NvxStrikes</a>.</sub>
 </div>

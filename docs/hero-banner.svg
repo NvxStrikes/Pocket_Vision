@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      * {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .grid-line {
+        stroke: rgba(245, 217, 10, 0.07);
+        stroke-width: 1;
+      }
+      .bracket {
+        fill: #F5D90A;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .status-pulse {
+        animation: pulseDot 1.8s infinite ease-in-out;
+      }
+      @keyframes pulseDot {
+        0%, 100% { fill: #00E676; opacity: 1; filter: drop-shadow(0 0 6px #00E676); }
+        50% { fill: #00B0FF; opacity: 0.4; filter: drop-shadow(0 0 1px #00B0FF); }
+      }
+      .scan-line {
+        animation: scanMove 4s infinite linear;
+      }
+      @keyframes scanMove {
+        0% { transform: translateY(0); opacity: 0; }
+        15% { opacity: 0.25; }
+        85% { opacity: 0.25; }
+        100% { transform: translateY(320px); opacity: 0; }
+      }
+      .cursor-blink {
+        animation: blink 1s infinite steps(1);
+      }
+      @keyframes blink {
+        0%, 50% { opacity: 1; }
+        51%, 100% { opacity: 0; }
+      }
+      .title-shadow {
+        fill: #F5D90A;
+      }
+      .title-front {
+        fill: #FFFFFF;
+      }
+    </style>
+    <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5D90A" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#00E5FF" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F5D90A" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="900" height="320" fill="#0C1017" />
+
+  <!-- Subtle Cyberpunk Grid -->
+  <g class="grid">
+    <line x1="0" y1="40" x2="900" y2="40" class="grid-line" />
+    <line x1="0" y1="80" x2="900" y2="80" class="grid-line" />
+    <line x1="0" y1="120" x2="900" y2="120" class="grid-line" />
+    <line x1="0" y1="160" x2="900" y2="160" class="grid-line" />
+    <line x1="0" y1="200" x2="900" y2="200" class="grid-line" />
+    <line x1="0" y1="240" x2="900" y2="240" class="grid-line" />
+    <line x1="0" y1="280" x2="900" y2="280" class="grid-line" />
+    <line x1="100" y1="0" x2="100" y2="320" class="grid-line" />
+    <line x1="200" y1="0" x2="200" y2="320" class="grid-line" />
+    <line x1="300" y1="0" x2="300" y2="320" class="grid-line" />
+    <line x1="400" y1="0" x2="400" y2="320" class="grid-line" />
+    <line x1="500" y1="0" x2="500" y2="320" class="grid-line" />
+    <line x1="600" y1="0" x2="600" y2="320" class="grid-line" />
+    <line x1="700" y1="0" x2="700" y2="320" class="grid-line" />
+    <line x1="800" y1="0" x2="800" y2="320" class="grid-line" />
+  </g>
+
+  <!-- Animated Scanning Beam -->
+  <rect x="0" y="0" width="900" height="25" fill="url(#scanGrad)" class="scan-line" pointer-events="none" />
+
+  <!-- Outer HUD Frame Border -->
+  <rect x="25" y="20" width="850" height="280" fill="none" stroke="#252F3E" stroke-width="1.5" />
+  <rect x="27" y="22" width="846" height="276" fill="none" stroke="rgba(245, 217, 10, 0.2)" stroke-width="1" />
+
+  <!-- Corner '+' Crosshairs -->
+  <text x="36" y="42" class="bracket">+</text>
+  <text x="852" y="42" class="bracket">+</text>
+  <text x="36" y="286" class="bracket">+</text>
+  <text x="852" y="286" class="bracket">+</text>
+
+  <!-- Top System Status Header -->
+  <circle cx="68" cy="46" r="4.5" class="status-pulse" />
+  <text x="84" y="50" fill="#E2E8F0" font-size="11" font-weight="700" letter-spacing="1.5">
+    SYSTEM: <tspan fill="#F5D90A">OPERATIONAL</tspan> // INGESTION: <tspan fill="#00E5FF">LOCAL_CAMERA</tspan> // STREAM_UPLOADS: <tspan fill="#F5D90A">0_BYTES</tspan>
+  </text>
+
+  <!-- Rev Tag Badge -->
+  <rect x="735" y="36" width="112" height="22" fill="#182230" stroke="#334155" stroke-width="1" />
+  <text x="748" y="51" fill="#94A3B8" font-size="10" font-weight="700" letter-spacing="1">REV: 2026.09</text>
+
+  <!-- Thin Horizontal Divider -->
+  <line x1="45" y1="72" x2="855" y2="72" stroke="#252F3E" stroke-width="1" />
+
+  <!-- Hero Title: POCKET VISION (Neo-Brutalist 3D Shadow Effect) -->
+  <text x="68" y="148" font-size="62" font-weight="800" letter-spacing="3" class="title-shadow">POCKET VISION</text>
+  <text x="64" y="144" font-size="62" font-weight="800" letter-spacing="3" class="title-front">POCKET VISION</text>
+
+  <!-- Toolkit Badge -->
+  <rect x="580" y="105" width="116" height="24" fill="#F5D90A" rx="2" />
+  <text x="592" y="121" fill="#0C1017" font-size="11" font-weight="800" letter-spacing="1.5">VISION_V1</text>
+
+  <!-- Subheading & Description -->
+  <text x="65" y="180" fill="#00E5FF" font-size="12" font-weight="700" letter-spacing="1.5">
+    CLIENT-SIDE COMPUTER VISION // 100% ON-DEVICE PERCEPTION
+  </text>
+  <text x="65" y="202" fill="#94A3B8" font-size="11" letter-spacing="0.5">
+    Zero remote video streaming. Zero tracking. Hardware-accelerated CameraX, MediaPipe &amp; Gemini execution.
+  </text>
+
+  <!-- Bottom Console Status Ticker Bar -->
+  <rect x="45" y="228" width="810" height="42" fill="#131B26" stroke="#252F3E" stroke-width="1" />
+  <text x="64" y="254" fill="#F5D90A" font-size="11" font-weight="700" letter-spacing="1">
+    &gt; STATUS: <tspan fill="#00E676">ACTIVE</tspan> // LIVE_INFERENCE: <tspan fill="#00E5FF">15_FPS</tspan> // PREVIEW: <tspan fill="#00E676">60_FPS</tspan> // GESTURES: <tspan fill="#F5D90A">ARMED</tspan> // READY FOR SCAN
+  </text>
+  <rect x="832" y="242" width="8" height="15" fill="#F5D90A" class="cursor-blink" />
+</svg>

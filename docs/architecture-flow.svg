@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&amp;display=swap');
+      * {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      .block-bg {
+        fill: #101622;
+        stroke: #252F3E;
+        stroke-width: 1.5;
+      }
+      .block-highlight {
+        fill: #121A28;
+        stroke: #F5D90A;
+        stroke-width: 2;
+      }
+      .block-cyan {
+        fill: #121A28;
+        stroke: #00E5FF;
+        stroke-width: 2;
+      }
+      .arrow {
+        stroke: #F5D90A;
+        stroke-width: 2;
+        stroke-dasharray: 4, 3;
+        animation: flowDash 1.2s infinite linear;
+      }
+      @keyframes flowDash {
+        to { stroke-dashoffset: -14; }
+      }
+      .arrow-head {
+        fill: #F5D90A;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="900" height="240" fill="#0C1017" />
+  <rect x="15" y="15" width="870" height="210" fill="none" stroke="#1F2937" stroke-width="1.5" />
+
+  <!-- Section Header -->
+  <text x="35" y="38" fill="#F5D90A" font-size="11" font-weight="800" letter-spacing="2">
+    ARCHITECTURE SPECIFICATION // ZERO-TRANSIT CAMERA DATAFLOW
+  </text>
+
+  <!-- Box 1: Ingestion -->
+  <g transform="translate(35, 55)">
+    <rect width="175" height="125" class="block-bg" />
+    <rect x="0" y="0" width="175" height="24" fill="#1C2533" />
+    <text x="12" y="16" fill="#94A3B8" font-size="9" font-weight="700">01 // INGESTION</text>
+    <text x="12" y="48" fill="#FFFFFF" font-size="13" font-weight="700">CameraX Feed</text>
+    <text x="12" y="66" fill="#94A3B8" font-size="10">RGBA_8888 60FPS</text>
+    <text x="12" y="82" fill="#64748B" font-size="9">Drop-Late Strategy</text>
+    <text x="12" y="108" fill="#F5D90A" font-size="9" font-weight="700">RAW SENSOR BYTES</text>
+  </g>
+
+  <!-- Arrow 1 -> 2 -->
+  <line x1="210" y1="118" x2="245" y2="118" class="arrow" />
+  <polygon points="245,114 253,118 245,122" class="arrow-head" />
+
+  <!-- Box 2: On-Device Processing (Highlighted) -->
+  <g transform="translate(255, 55)">
+    <rect width="185" height="125" class="block-highlight" />
+    <rect x="0" y="0" width="185" height="24" fill="#F5D90A" />
+    <text x="12" y="16" fill="#0C1017" font-size="9" font-weight="800">02 // ON-DEVICE VISION</text>
+    <text x="12" y="48" fill="#FFFFFF" font-size="13" font-weight="700">MediaPipe Tasks</text>
+    <text x="12" y="66" fill="#F5D90A" font-size="10">80 Objects · 21 Points</text>
+    <text x="12" y="82" fill="#94A3B8" font-size="9">52 Face Blendshapes</text>
+    <text x="12" y="108" fill="#00E676" font-size="9" font-weight="700">100% ON-DEVICE GPU/CPU</text>
+  </g>
+
+  <!-- Arrow 2 -> 3 -->
+  <line x1="440" y1="118" x2="475" y2="118" class="arrow" />
+  <polygon points="475,114 483,118 475,122" class="arrow-head" />
+
+  <!-- Box 3: Temporal Stabilization -->
+  <g transform="translate(485, 55)">
+    <rect width="175" height="125" class="block-cyan" />
+    <rect x="0" y="0" width="175" height="24" fill="#00E5FF" />
+    <text x="12" y="16" fill="#0C1017" font-size="9" font-weight="800">03 // STABILIZATION</text>
+    <text x="12" y="48" fill="#FFFFFF" font-size="13" font-weight="700">EMA Smoother</text>
+    <text x="12" y="66" fill="#00E5FF" font-size="10">Anti-Flicker Filter</text>
+    <text x="12" y="82" fill="#94A3B8" font-size="9">5-Frame Hysteresis</text>
+    <text x="12" y="108" fill="#00E5FF" font-size="9" font-weight="700">HUD HUD_RENDER 60FPS</text>
+  </g>
+
+  <!-- Arrow 3 -> 4 -->
+  <line x1="660" y1="118" x2="695" y2="118" class="arrow" />
+  <polygon points="695,114 703,118 695,122" class="arrow-head" />
+
+  <!-- Box 4: Smart Scan On-Demand -->
+  <g transform="translate(705, 55)">
+    <rect width="160" height="125" class="block-bg" />
+    <rect x="0" y="0" width="160" height="24" fill="#1C2533" />
+    <text x="12" y="16" fill="#94A3B8" font-size="9" font-weight="700">04 // CLOUD SMART SCAN</text>
+    <text x="12" y="48" fill="#FFFFFF" font-size="13" font-weight="700">Gemini 2.5 Flash</text>
+    <text x="12" y="66" fill="#94A3B8" font-size="10">Single Frame JPEG</text>
+    <text x="12" y="82" fill="#64748B" font-size="9">Structured JSON</text>
+    <text x="12" y="108" fill="#F5D90A" font-size="9" font-weight="700">ON-DEMAND ONLY</text>
+  </g>
+
+  <!-- Bottom Data Boundary Status -->
+  <text x="35" y="208" fill="#94A3B8" font-size="10" font-weight="700" letter-spacing="1">
+    NETWORK BOUNDARY: <tspan fill="#F5D90A">0 PASSIVE HTTP REQUESTS</tspan> | REMOTE SERVERS: <tspan fill="#00E5FF">BYPASS FOR LIVE VISION</tspan> | TELEMETRY: <tspan fill="#00E676">NONE</tspan>
+  </text>
+</svg>
